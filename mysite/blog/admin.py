@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Post,Customer,myfriends
+from blog.models import Post,Customer,myfriends
 
 
 # Register your models here.

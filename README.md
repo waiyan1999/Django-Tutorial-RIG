@@ -31,9 +31,14 @@ python manage.py createsuperuser
 python manage.py makemigrations
 python manage.py migrate
 
+##### model #############
+created tabel in database as model
+
+
 
 #### Day 7 #########
 ##### view #########
+fromm myapp.models import table(modle)
 
 #for templates in setting.py
 'DIRS': [BASE_DIR/'templates'],
@@ -81,7 +86,10 @@ class myfriends(models.Model):
         return self.name
 
 
-#########media note
+######### media note #####
+photo = models.ImageField(upload_to='photo')
+<img id="mm" src="{{ i.photo.url }}" alt="photo">
+
 setting.py
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
@@ -104,3 +112,5 @@ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 
 ######################
+model > view > control > template
+
