@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page</title>
+    <link rel="stylesheet" href="{% static 'mycss.css' %}">
+    
+</head>
+<body>
+    <h1>This is post page</h1>
+
+    <img src="{% static 'Image/img2.jpg' %}" alt="img1">
+
+
+        <!-- {{post_data}} -->
+
+        {% for i in post_data %}
+           <h2>{{ i }}</h2> 
+           <h3>{{ i.title }}</h3> 
+            <h4>{{ i.body }}</h4>
+        {% endfor %}
+
+
+</body>
+</html>
